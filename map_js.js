@@ -7,19 +7,13 @@ function initMap() {
     mapId: '31889289191ab1d3'
   });
 
-  const meat = document.createElement("img");
-
-  meat.src =
+  const meat = 
     "./testmapmarkerimg/축산.png";
 
-  const fish = document.createElement("img");
-
-  fish.src =
+  const fish = 
     "./testmapmarkerimg/수산.png";
 
-  const restaurant = document.createElement("img");
-
-  restaurant.src =
+  const restaurant = 
     "./testmapmarkerimg/음식.png";
 
   const features = [
@@ -69,7 +63,7 @@ function initMap() {
   for (let i = 0; i < features.length; i++) {
     const marker = new google.maps.Marker({
       position: features[i].position,
-      icon: features[i].icon,
+      icon: features[i].content.icon,
       map: map,
     });
   }
